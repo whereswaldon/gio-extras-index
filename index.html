@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio Extras</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        .resizer {
+            display: flex;
+            resize: both;
+            overflow: hidden;
+            border: 1px solid gray;
+            height: 50vmin;
+        }
+        .resizer > .resized {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+  </head>
+  <body>
+      <main>
+          <div class=container>
+            <h1>Gio Extras</h1>
+
+            <p>This page provides descriptions and WASM demos (when possible) for the various Gio extension libraries available as part of <a href=https://sr.ht/~whereswaldon/gio-extras/><code>gio-extras</code></a>.</p>
+
+            <p><strong>NOTE:</strong> Golang exhibits relatively poor performance when transpiled to WASM. The performance of these WASM demos is <em>not</em> indicative of their performance as native widgets on Gio's other target platforms.</p>
+
+            <p>See each project's README for details about supported platforms. Many of these libraries aspire to support all Gio target platforms, but currently only support a subset.</p>
+
+            <h2>Materials</h2>
+
+            <p><a href=https://git.sr.ht/~whereswaldon/materials>Materials</a> provides implementations of common material design components. Here is a demo of some of them:</p>
+            <div class=resizer>
+                <iframe class=resized src=/materials></iframe>
+            </div>
+
+            <h2>Colorpicker</h2>
+
+            <p><a href=https://git.sr.ht/~whereswaldon/colorpicker>Colorpicker</a> provides implementations a couple simple color selection widgets. You can see them here:</p>
+            <div class=resizer>
+                <iframe class=resized src=/colorpicker></iframe>
+            </div>
+
+            <h2>Scroll</h2>
+
+            <p><a href=https://git.sr.ht/~whereswaldon/scroll>Scroll</a> provides a simple scrollbar suitable for use with the gio <code>layout.List</code> type.</p>
+
+            <p>Demo under construction!</p>
+
+            <h2>Niotify</h2>
+
+            <p><a href=https://git.sr.ht/~whereswaldon/niotify>Niotify</a> provides a simple API for sending notification badges from the background.</p>
+
+            <p>No demo is possible, as WASM is not currently supported.</p>
+
+            <h2>Haptic</h2>
+
+            <p><a href=https://git.sr.ht/~whereswaldon/haptic>Haptic</a> provides a simple API for sending haptic feedback buzzes.</p>
+
+            <p>No demo is possible, as WASM is not currently supported.</p>
+          </div>
+      </main>
+
+  </body>
+</html>
+
